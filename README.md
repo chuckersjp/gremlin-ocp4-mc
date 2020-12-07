@@ -1,7 +1,7 @@
 # gremlin-ocp4-mc
 OpenShift 4 Machine Config for Gremlin Chaos Engineering Platform
 
-# What is this
+# What is this?
 Gremlin Chaos Engineering Platform (https://www.gremlin.com/) is a way to help
 test your Kubernetes cluster to determine its resiliance by doing nasty things
 to it.
@@ -25,7 +25,7 @@ https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshi
 
 This is done as a straight cut and paste of the results of the following commands:
 
-`curl https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil | base64 -w0`
+`curl -s https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil | base64 -w0`
 
 # Support
 None.  ;-)
