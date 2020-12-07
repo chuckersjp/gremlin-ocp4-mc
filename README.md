@@ -27,6 +27,20 @@ This is done as a straight cut and paste of the results of the following command
 
 `curl -s https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil | base64 -w0`
 
+(You may need to use `set maxmempattern=2000000` or something in your .vimrc file)
+You can also try using `:r gremlin-openshift4.cil.b64` at the correct spot in the file.  Make sure it is on the
+correct line and there is no space!
+
+You will need (should) change the name of the Machine Config to match the Node label as well as updating the node label
+to match the node types you wish to update.
+
+This also includes a completed worker Machine Config for nodes labelled as `worker`  It is current as of 2020/12/07
+so if there have been any updates to the gremlin-openshift4.cil after that date, it will not be reflected.
+
+To apply use:
+
+`oc create -f 95-worker-gremlin-semodule.yaml`
+
 # Support
 None.  ;-)
 
