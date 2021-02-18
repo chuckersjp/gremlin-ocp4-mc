@@ -23,9 +23,9 @@ by taking the base64 encoded SELinux modules required found at
 
 https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil
 
-This is done as a straight cut and paste of the results of the following commands:
+This is done as a straight cut and paste of the results of the following commands (Mac OS):
 
-`curl -s https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil | base64 -w0`
+`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -o gremlin-openshift4.cil.base64`
 
 (You may need to use `set maxmempattern=2000000` or something in your .vimrc file)
 You can also try using `:r gremlin-openshift4.cil.b64` at the correct spot in the file.  Make sure it is on the
@@ -42,7 +42,6 @@ To apply use:
 `oc create -f 95-worker-gremlin-semodule.yaml`
 
 # Support
-None.  ;-)
+This software is available under the [Apache 2.0 License](LICENSE). 
 
-This isn't officially supported by Red Hat nor Gremlin (unless either wants to take it over.)  Use at
-your own risk.
+It is delivered as Open Source, we will do our best to respond to issues posted in this Github Repo. 
