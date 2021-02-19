@@ -23,8 +23,12 @@ by taking the base64 encoded SELinux modules required found at
 
 https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshift4.cil
 
-This is done as a straight cut and paste of the results of the following commands (Mac OS):
+This is done as a straight cut and paste of the results of the following commands:
 
+(RHEL):
+`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -w0`
+
+(MacOS):
 `curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -o gremlin-openshift4.cil.base64`
 
 (You may need to use `set maxmempattern=2000000` or something in your .vimrc file)
