@@ -25,11 +25,11 @@ https://github.com/gremlin/selinux-policies/blob/master/policies/gremlin-openshi
 
 This is done as a straight cut and paste of the results of the following commands:
 
-(RHEL):
-`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -w0`
+RHEL: 
+`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -w0 > gremlin-openshift4.cil.b64`
 
-(MacOS):
-`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -o gremlin-openshift4.cil.base64`
+MacOS: 
+`curl -s https://raw.githubusercontent.com/gremlin/selinux-policies/master/policies/gremlin-openshift4.cil | base64 -o gremlin-openshift4.cil.b64`
 
 (You may need to use `set maxmempattern=2000000` or something in your .vimrc file)
 You can also try using `:r gremlin-openshift4.cil.b64` at the correct spot in the file.  Make sure it is on the
